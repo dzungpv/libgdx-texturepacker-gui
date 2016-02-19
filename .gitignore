@@ -5,6 +5,7 @@ dist/
 nbdist/
 nbactions.xml
 .nb-gradle/
+testme!/output
 
 # OS-specific files
 .DS_Store
