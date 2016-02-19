@@ -88,9 +88,9 @@ public class MainWindow extends javax.swing.JFrame {
 		Style.registerCssClasses(versionLabel, ".versionLabel");
 		Style.apply(getContentPane(), new Style(Res.getUrl("css/style.css")));
 
-		versionLabel.initAndCheck("3.2.0", null,
-			"http://www.aurelienribon.com/projects/libgdx-texturepacker-gui/versions.txt",
-			"http://code.google.com/p/libgdx-texturepacker-gui/");
+		versionLabel.initAndCheck("3.3.0", null,
+			"https://raw.githubusercontent.com/dzungpv/libgdx-texturepacker-gui/versions.txt",
+			"https://github.com/dzungpv/libgdx-texturepacker-gui/");
     }
 
 	public void load(File file) throws IOException {
@@ -529,7 +529,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         browseOutputBtn.setText("...");
         browseOutputBtn.setMargin(new java.awt.Insets(2, 3, 2, 2));
-        browseOutputBtn.setOpaque(false);
 
         filenameField.setColumns(10);
 
@@ -538,7 +537,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         browseInputBtn.setText("...");
         browseInputBtn.setMargin(new java.awt.Insets(2, 3, 2, 2));
-        browseInputBtn.setOpaque(false);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Input directory:");
@@ -594,7 +592,7 @@ public class MainWindow extends javax.swing.JFrame {
         packsList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(packsList);
 
-        commentLabel.setText("Leave blank for \"<packname>.pack\"");
+        commentLabel.setText("Leave blank for \"<packname>.atlas\"");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -660,23 +658,19 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Min page height");
 
-        opt_minPageHeight_nud.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(16), Integer.valueOf(0), null, Integer.valueOf(1)));
+        opt_minPageHeight_nud.setModel(new javax.swing.SpinnerNumberModel(16, 0, null, 1));
 
         opt_pot_chk.setText("Force PoT");
-        opt_pot_chk.setOpaque(false);
 
         opt_duplicatePadding_chk.setText("Duplicate padding");
-        opt_duplicatePadding_chk.setOpaque(false);
 
         opt_alias_chk.setText("Use aliases");
-        opt_alias_chk.setOpaque(false);
 
-        opt_minPageWidth_nud.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(16), Integer.valueOf(0), null, Integer.valueOf(1)));
+        opt_minPageWidth_nud.setModel(new javax.swing.SpinnerNumberModel(16, 0, null, 1));
 
-        opt_maxPageWidth_nud.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(512), Integer.valueOf(0), null, Integer.valueOf(1)));
+        opt_maxPageWidth_nud.setModel(new javax.swing.SpinnerNumberModel(512, 0, null, 1));
 
         opt_ignoreBlankImages_chk.setText("Ignore blank imgs");
-        opt_ignoreBlankImages_chk.setOpaque(false);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Max page width");
@@ -684,22 +678,18 @@ public class MainWindow extends javax.swing.JFrame {
         opt_alphaThreashold_nud.setModel(new javax.swing.SpinnerNumberModel(0, 0, 255, 1));
 
         opt_debug_chk.setText("Debug");
-        opt_debug_chk.setOpaque(false);
 
         opt_fast_chk.setText("Use fast algorithm");
-        opt_fast_chk.setOpaque(false);
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel18.setText("Jpeg quality");
 
         opt_stripWhitespaceY_chk.setText("Strip whitespace Y");
-        opt_stripWhitespaceY_chk.setOpaque(false);
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("PaddingX");
 
         opt_rotation_chk.setText("Allow rotations");
-        opt_rotation_chk.setOpaque(false);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Min page width");
@@ -708,28 +698,23 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel5.setText("Alpha threshold");
 
         opt_edgePadding_chk.setText("Edge padding");
-        opt_edgePadding_chk.setOpaque(false);
 
-        opt_paddingX_nud.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(2), Integer.valueOf(0), null, Integer.valueOf(1)));
+        opt_paddingX_nud.setModel(new javax.swing.SpinnerNumberModel(2, 0, null, 1));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Max page height");
 
-        opt_maxPageHeight_nud.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(512), Integer.valueOf(0), null, Integer.valueOf(1)));
+        opt_maxPageHeight_nud.setModel(new javax.swing.SpinnerNumberModel(512, 0, null, 1));
 
         opt_jpegQuality_nud.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(0.0f), Float.valueOf(0.0f), Float.valueOf(1.0f), Float.valueOf(0.05f)));
 
         opt_format_cbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "RGBA8888", "RGBA4444", "RGB888", "RGB565", "Alpha", "LuminanceAlpha", "Intensity" }));
-        opt_format_cbox.setOpaque(false);
 
         opt_filterMin_cbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nearest", "Linear", "MipMap", "MipMapNearestNearest", "MipMapNearestLinear", "MipMapLinearNearest", "MipMapLinearLinear" }));
-        opt_filterMin_cbox.setOpaque(false);
 
         opt_outputFormat_cbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "png", "jpg" }));
-        opt_outputFormat_cbox.setOpaque(false);
 
         opt_filterMag_cbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nearest", "Linear", "MipMap", "MipMapNearestNearest", "MipMapNearestLinear", "MipMapLinearNearest", "MipMapLinearLinear" }));
-        opt_filterMag_cbox.setOpaque(false);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Mag filter");
@@ -746,7 +731,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("PaddingY");
 
-        opt_paddingY_nud.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(2), Integer.valueOf(0), null, Integer.valueOf(1)));
+        opt_paddingY_nud.setModel(new javax.swing.SpinnerNumberModel(2, 0, null, 1));
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("WrapX");
@@ -755,13 +740,10 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel20.setText("WrapY");
 
         opt_wrapX_cbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ClampToEdge", "Repeat" }));
-        opt_wrapX_cbox.setOpaque(false);
 
         opt_wrapY_cbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ClampToEdge", "Repeat" }));
-        opt_wrapY_cbox.setOpaque(false);
 
         opt_stripWhitespaceX_chk.setText("Strip whitespace X");
-        opt_stripWhitespaceX_chk.setOpaque(false);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -799,15 +781,14 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(opt_stripWhitespaceX_chk))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel18)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(opt_jpegQuality_nud))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(opt_alphaThreashold_nud, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(opt_jpegQuality_nud))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(opt_alphaThreashold_nud, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(opt_ignoreBlankImages_chk)
                                 .addComponent(opt_debug_chk)
@@ -1003,7 +984,7 @@ public class MainWindow extends javax.swing.JFrame {
             centerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(centerPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(renderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
+                .addComponent(renderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

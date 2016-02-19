@@ -23,7 +23,7 @@ public class Main {
 			}
 
 			Canvas canvas = new Canvas();
-			LwjglCanvas glCanvas = new LwjglCanvas(canvas, true);
+			LwjglCanvas glCanvas = new LwjglCanvas(canvas);
 
 			MainWindow mw = new MainWindow(canvas, glCanvas.getCanvas());
 			mw.pack();

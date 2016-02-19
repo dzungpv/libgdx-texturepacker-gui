@@ -1,25 +1,25 @@
 
-test-me!.png
+sdasdsa.png
 format: RGBA8888
-filter: Linear,Linear
+filter: Nearest,Nearest
 repeat: none
 test02 (non POT)
   rotate: false
-  xy: 1, 1
+  xy: 2, 2
   size: 300, 300
   orig: 300, 300
   offset: 0, 0
   index: -1
 test01
   rotate: false
-  xy: 303, 45
+  xy: 304, 46
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 test03 (multi shapes)
   rotate: false
-  xy: 561, 45
+  xy: 562, 46
   size: 256, 256
   orig: 256, 256
   offset: 0, 0

@@ -6,6 +6,7 @@ import aurelienribon.tweenengine.TweenManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -33,7 +34,8 @@ public class Label {
 	private float offsetX;
 	private boolean isTouchOver = false;
 	private State state = State.HIDDEN;
-
+        GlyphLayout layout = new GlyphLayout();
+        
 	public Label(float y, float w, float h, String text, BitmapFont font, Color color, Anchor anchor) {
 		this.y = y;
 		this.w = w;
@@ -137,7 +139,8 @@ public class Label {
 		float sh = Gdx.graphics.getHeight();
 		float x = isAnchorLeft() ? offsetX : sw-w-offsetX;
 		float bgX = isAnchorLeft() ? x - w/10 : x;
-		float textH = font.getBounds(text).height;
+                layout.setText(font, text);
+		float textH = layout.height;
 
 		bg.setPosition(bgX, sh - y);
 		bg.draw(batch);
